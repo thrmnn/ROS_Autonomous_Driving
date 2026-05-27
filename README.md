@@ -1,10 +1,12 @@
-# Autonomous Driving Pipeline in ROS
+# Autonomous Driving Pipeline in ROS — Segway Loomo
 
-Open Source Autonomous Driving Pipeline implemented in ROS. It is part of EPFL [VITA](https://www.epfl.ch/labs/vita/) Lab project
+Open-source modular autonomy stack for mobile robots in ROS, developed at **[EPFL VITA Lab](https://www.epfl.ch/labs/vita/)** under Dr. Alexandre Alahi. Targets a **Segway Loomo** indoor mobile robot; framework generalizes to other platforms.
+
+> **Status:** archived (last active 2023-06). Reference implementation — the modular structure (detection → tracking → keypoints → control) holds up; the underlying perception models (YoloV5, Stark, MMTracking) and ROS 1 / Catkin workspace are pinned to the 2023 stack. A modernized successor lives in [perception-pipeline](https://github.com/thrmnn/perception-pipeline).
 
 <p float="left">
   <img src="./img/ADP.gif" width="400" />
-  <img src="./src/control/Images/MR_Loomo_closed_loop.gif" width="400" /> 
+  <img src="./src/control/Images/MR_Loomo_closed_loop.gif" width="400" />
 </p>
 
 ## Description
@@ -79,28 +81,22 @@ Autonomous Pipeline
 
 ## Acknowledgements
 
-This Repository is based on the previous project [Autonomous Driving Pipeline](https://github.com/cconejob/Autonomous_driving_pipeline)
+This pipeline builds on the prior [Autonomous Driving Pipeline](https://github.com/cconejob/Autonomous_driving_pipeline) by C. Conejo Bernal. The companion Android bridge for the Loomo client lives at [thrmnn/Loomo_app_ADP](https://github.com/theoh-io/Loomo_app_ADP) (mirrored — original on theoh-io).
 
-Before adopting the pipeline for a singular purpose, we recommend to read the article that explains the previous version of this work in detail:
-[Design and Implementation for Fully Autonomous Driving Systems. Paraplegic Patients Assistance](/paper.pdf) [pdf]
+The full VITA Lab technical report is bundled as [paper.pdf](/paper.pdf) — design rationale, ablation results, and a deeper walkthrough of the application to paraplegic-patient walking assistance.
 
 ---
 
-## Future Improvements
-- [x] Add Perception functions from MMTrack
-- [x] Add more Documentation
-- [x] Redo the Install Procedure
-- [x] Create a Perception object only running yolo for simple quickstart
-- [ ] Create Docker Image for easy install
-- [x] New Node for 2D/3D Keypoints to reduce latency
-- [x] Support for Multiple Person Tracking and Avoidance 
-- [ ] Create a simulation environment in PyBullet/IsaacGym...
-- [ ] Collect RosBags to be able to test methods without the robot.
-- [ ] add a Robot description file (.urdf) of Loomo robot 
+## License
 
+MIT — see [LICENSE](./LICENSE).
 
+If you build on this for academic work, a citation is appreciated:
 
-
+```
+Hermann, T. A. (2023). Modular Autonomous Driving Pipeline in ROS — applied to
+mobile assistance robots. EPFL VITA Lab, under Dr. Alexandre Alahi.
+```
 
 
 
