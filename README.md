@@ -1,6 +1,6 @@
 # Autonomous Driving Pipeline in ROS — Segway Loomo
 
-Open-source modular autonomy stack for mobile robots in ROS, developed at **[EPFL VITA Lab](https://www.epfl.ch/labs/vita/)** under Dr. Alexandre Alahi. Targets a **Segway Loomo** indoor mobile robot; framework generalizes to other platforms.
+Modular autonomy stack for mobile robots in ROS, developed at **[EPFL VITA Lab](https://www.epfl.ch/labs/vita/)** under Dr. Alexandre Alahi. Targets a **Segway Loomo** indoor mobile robot; framework generalizes to other platforms.
 
 > **Status:** archived (last active 2023-06). Reference implementation — the modular structure (detection → tracking → keypoints → control) holds up; the underlying perception models (YoloV5, Stark, MMTracking) and ROS 1 / Catkin workspace are pinned to the 2023 stack. A modernized successor lives in [perception-pipeline](https://github.com/thrmnn/perception-pipeline).
 
@@ -81,21 +81,25 @@ Autonomous Pipeline
 
 ## Acknowledgements
 
-This pipeline builds on the prior [Autonomous Driving Pipeline](https://github.com/cconejob/Autonomous_driving_pipeline) by C. Conejo Bernal. The companion Android bridge for the Loomo client lives at [thrmnn/Loomo_app_ADP](https://github.com/theoh-io/Loomo_app_ADP) (mirrored — original on theoh-io).
+This pipeline keeps the base of C. Conejo Bernal's [Autonomous Driving Pipeline](https://github.com/cconejob/Autonomous_driving_pipeline) (2020–21). Théo Alessandro Hermann redid the architecture and the perception block in 2022–23, continuing the VITA Lab research line. The companion Android bridge for the Loomo client lives at [theoh-io/Loomo_app_ADP](https://github.com/theoh-io/Loomo_app_ADP).
 
-The full VITA Lab technical report is bundled as [paper.pdf](/paper.pdf) — design rationale, ablation results, and a deeper walkthrough of the application to paraplegic-patient walking assistance.
+[paper.pdf](/paper.pdf) is the technical report on the original pipeline, by Carlos Conejo, Yuejiang Liu, Mohammadhossein Bahari and Alexandre Alahi: its design, and its application to walking assistance for paraplegic patients.
 
 ---
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+No licence for now: the code is shared for reference. It builds on C. Conejo Bernal's pipeline, whose repository carries no licence, so a licence for the whole waits for his agreement.
 
-If you build on this for academic work, a citation is appreciated:
+If you build on this for academic work, please cite both:
 
 ```
 Hermann, T. A. (2023). Modular Autonomous Driving Pipeline in ROS — applied to
 mobile assistance robots. EPFL VITA Lab, under Dr. Alexandre Alahi.
+
+Conejo, C., Liu, Y., Bahari, M., & Alahi, A. Design and Implementation of a
+Pipeline for Fully Autonomous Driving Systems. Paraplegic Patients Assistance.
+EPFL VITA Lab technical report (paper.pdf in this repository).
 ```
 
 
